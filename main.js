@@ -16,10 +16,18 @@ function RemoveContact(contact){
     contactos = contactos.filter(c => c.name !== contact);
 }
 
+function PrintContacts(){
+    for(let contact of contactos){
+        console.log("nombre: " + contact.name + " email: " + contact.email);
+    }
+}
+
 console.log("Starting");
 
 AddContact("Pedro Kabron","pedro@hotmail.com");
 AddContact("Pedro Kabron","pedro@hotmail.com");
 RemoveContact("John Doe");
 
-console.log(contactos);
+PrintContacts();
+
+//console.log(contactos);
